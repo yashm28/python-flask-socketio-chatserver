@@ -8,4 +8,6 @@ It uses following events.
 
 'response' : to receive data (bounced data) at client side 
 
+To test chat server run test.html on localhost
+
 
