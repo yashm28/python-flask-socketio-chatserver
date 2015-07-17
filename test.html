@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+	<script type="text/javascript" src="test.js" />
+</head>
+<body bgcolor="#123">
+Hello
+	<form>
+		<button value="submit" onclick="send_msg()"/>
+	</form>
+</body>
+</html> -->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Flask-SocketIO-Chat: {{ room }}</title>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            var socket;
+            $(document).ready(function(){
+                socket = io.connect('http://hackindia-chat.mybluemix.net/');
+                var obj = {
+                    'data' : 'hello'
+                }
+                socket.on('connect', function() {
+                    socket.emit('json', obj);
+                });
+                socket.on('response', function (data) {
+                    alert(JSON.stringify(data));
+                    console.log(data);
+                });
+            });
+        </script>
+	</head>
+    <!-- <body>
+        <button>Yeah</button>
+    </body> -->
+</html>
+
