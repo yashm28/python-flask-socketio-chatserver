@@ -1,0 +1,4 @@
+---
+applications:
+- name: antius-python-flask-hack-chat-app
+  memory: 128M
